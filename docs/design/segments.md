@@ -102,7 +102,7 @@ whereas the first two grow linearly in the size of the data (in the
 worst case), the size of the bitmap section is the product of data
 size * column cardinality. Compression will help us here though
 because we know that for each row in 'column data', there will only be a
-single bitmap that has non-zero entry. This means that high cardinality
+single bitmap that has a non-zero entry. This means that high cardinality
 columns will have extremely sparse, and therefore highly compressible,
 bitmaps. Druid exploits this using compression algorithms that are
 specially suited for bitmaps, such as roaring bitmap compression.
